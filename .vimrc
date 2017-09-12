@@ -57,6 +57,7 @@ let g:syntastic_check_on_wq = 0
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'L9'
+Plugin 'git://github.com/dkprice/vim-easygrep.git'
 Plugin 'itchyny/lightline.vim'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'mhinz/vim-signify'
