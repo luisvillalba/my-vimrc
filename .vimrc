@@ -87,6 +87,9 @@ nmap <leader>n :NERDTree<CR>
 " Buffer Explorer
 map <space> :BufExplorer<return>
 
+" Navigation
+nmap H ^
+nmap L $
 
 " -------------------- Theming --------------------
 colorscheme deep-space
