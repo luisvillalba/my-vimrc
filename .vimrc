@@ -1,4 +1,5 @@
 "-------------------- BASIC SETUP --------------------
+let mapleader=","
 set autoindent
 set autoread
 set backspace=indent,eol,start
@@ -8,27 +9,27 @@ set expandtab
 set fileencoding=utf-8
 set fileformat=unix
 set fileformats=unix,dos
-set ruler
 set hidden
 set history=1000
 set hlsearch
-set incsearch
 set ignorecase
-set smartcase
+set incsearch
 set lazyredraw
 set nobackup
 set nocompatible
 set noswapfile
+set nowrap
 set number
+set ruler
 set scrolloff=3
+set shell=bash
 set shiftwidth=2
+set smartcase
 set smartindent
 set softtabstop=2
 set textwidth=150
 set wildmode=list:longest
 set writebackup
-set shell=bash
-let mapleader=","
 syntax on
 filetype indent on
 filetype on
@@ -58,29 +59,28 @@ let g:syntastic_check_on_wq = 0
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'L9'
-Plugin 'git://github.com/dkprice/vim-easygrep.git'
-Plugin 'itchyny/lightline.vim'
+Plugin 'git://github.com/pangloss/vim-javascript.git'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'mhinz/vim-signify'
+Plugin 'mileszs/ack.vim'
+Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-fugitive'
-Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'skammer/vim-css-color'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()
 
 autocmd VimEnter * wincmd p
 
-" --------------------- KEY MAPPINGS -------------------
-" Fuzzy Finder
-nmap <leader>p :FufFile<CR>
-nmap <leader>b :FufBuffer<CR>
-nmap <leader>t :FufTaggedFile<CR>
-nmap <leader>t :FufTaggedFile<CR>
+let g:javascript_plugin_jsdoc = 1
 
+" --------------------- KEY MAPPINGS -------------------
 " Nerdtree
 nmap <leader>n :NERDTree<CR>
 
@@ -90,6 +90,15 @@ map <space> :BufExplorer<return>
 " Navigation
 nmap H ^
 nmap L $
+
+" Edit common files
+map <leader>1 :e ~/.vimrc<enter>
+map <leader>w :w<enter>:so %<enter>
+
+" -------------------- Macros --------------------
+" Converts current line to a console log
+let @l = 'Iconsole.log(A);'
+nmap <leader>l @l
 
 " -------------------- Theming --------------------
 colorscheme deep-space
