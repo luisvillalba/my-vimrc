@@ -51,6 +51,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_args = "--no-eslintrc --config ~/.eslintrc.json"
 let g:syntastic_scss_checkers = ['sass_lint']
+let g:syntastic_mode_map = {"mode": "pasive", "passive_filetypes": ["html"]}
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
@@ -59,10 +60,9 @@ let g:syntastic_check_on_wq = 0
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'L9'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'git://github.com/pangloss/vim-javascript.git'
 Plugin 'hail2u/vim-css3-syntax'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'mhinz/vim-signify'
 Plugin 'mileszs/ack.vim'
@@ -72,7 +72,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'skammer/vim-css-color'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 
@@ -94,6 +95,12 @@ nmap L $
 " Edit common files
 map <leader>1 :e ~/.vimrc<enter>
 map <leader>w :w<enter>:so %<enter>
+
+" Toggle Syntastic Mode
+nmap <leader>t :SyntasticToggleMode<enter>
+
+" Surround
+vmap <leader>' S'
 
 " -------------------- Macros --------------------
 " Converts current line to a console log
