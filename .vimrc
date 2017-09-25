@@ -48,8 +48,9 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
+let s:eslint_path = system('PATH=$(npm bin):$PATH && which eslint')
+let b:syntastic_javascript_eslint_exec = substitute(s:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_args = "--no-eslintrc --config ~/.eslintrc.json"
 let g:syntastic_scss_checkers = ['sass_lint']
 let g:syntastic_mode_map = {"mode": "pasive", "passive_filetypes": ["html"]}
 let g:syntastic_auto_loc_list = 1
@@ -90,7 +91,9 @@ map <space> :BufExplorer<return>
 
 " Navigation
 nmap H ^
+vmap H ^
 nmap L $
+vmap L $
 
 " Edit common files
 map <leader>1 :e ~/.vimrc<enter>
