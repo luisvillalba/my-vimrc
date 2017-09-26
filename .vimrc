@@ -1,5 +1,5 @@
 "-------------------- BASIC SETUP --------------------
-let mapleader=","
+let mapleader=" "
 set autoindent
 set autoread
 set backspace=indent,eol,start
@@ -63,6 +63,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'L9'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'git://github.com/pangloss/vim-javascript.git'
+Plugin 'git://github.com/tpope/vim-dispatch.git'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'mhinz/vim-signify'
@@ -81,15 +82,21 @@ call vundle#end()
 autocmd VimEnter * wincmd p
 
 let g:javascript_plugin_jsdoc = 1
+let g:ack_use_dispatch = 1
 
 " --------------------- KEY MAPPINGS -------------------
 " Nerdtree
 nmap <leader>n :NERDTree<CR>
 
 " Buffer Explorer
-map <space> :BufExplorer<return>
+map <leader>b :BufExplorer<return>
 
 " Navigation
+map <leader><tab> <c-w>w
+noremap <silent> <leader>l <c-w>l
+noremap <silent> <leader>h <c-w>h
+noremap <silent> <leader>k <c-w>k
+noremap <silent> <leader>j <c-w>j
 nmap H ^
 vmap H ^
 nmap L $
@@ -97,13 +104,18 @@ vmap L $
 
 " Edit common files
 map <leader>1 :e ~/.vimrc<enter>
-map <leader>w :w<enter>:so %<enter>
+map <leader>2 :e ~/.zshrc<enter>
+map <leader>wr :w<enter>:so %<enter>
 
 " Toggle Syntastic Mode
 nmap <leader>t :SyntasticToggleMode<enter>
 
 " Surround
 vmap <leader>' S'
+
+" Ack Motions
+vnoremap <leader>as y:Ack <C-r>=fnameescape(@")<CR><CR>
+noremap <leader>aw :Ack <cword><cr>
 
 " -------------------- Macros --------------------
 " Converts current line to a console log
