@@ -120,7 +120,7 @@ noremap <leader>aw :Ack <cword><cr>
 " -------------------- Macros --------------------
 " Converts current line to a console log
 let @l = 'Iconsole.log(A);'
-nmap <leader>l @l
+nmap <leader>lg @l
 
 " -------------------- Theming --------------------
 colorscheme deep-space
