@@ -89,14 +89,10 @@ let g:ack_use_dispatch = 1
 nmap <leader>n :NERDTree<CR>
 
 " Buffer Explorer
-map <leader>b :BufExplorer<return>
+nmap , :BufExplorer<return>
 
 " Navigation
 map <leader><tab> <c-w>w
-noremap <silent> <leader>l <c-w>l
-noremap <silent> <leader>h <c-w>h
-noremap <silent> <leader>k <c-w>k
-noremap <silent> <leader>j <c-w>j
 nmap H ^
 vmap H ^
 nmap L $
