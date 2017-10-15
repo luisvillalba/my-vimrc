@@ -69,6 +69,7 @@ Plugin 'jlanzarotta/bufexplorer'
 Plugin 'mhinz/vim-signify'
 Plugin 'mileszs/ack.vim'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'posva/vim-vue'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'skammer/vim-css-color'
@@ -89,10 +90,14 @@ let g:ack_use_dispatch = 1
 nmap <leader>n :NERDTree<CR>
 
 " Buffer Explorer
-nmap , :BufExplorer<return>
+map <leader>b :BufExplorer<return>
 
 " Navigation
 map <leader><tab> <c-w>w
+noremap <silent> <leader>l <c-w>l
+noremap <silent> <leader>h <c-w>h
+noremap <silent> <leader>k <c-w>k
+noremap <silent> <leader>j <c-w>j
 nmap H ^
 vmap H ^
 nmap L $
