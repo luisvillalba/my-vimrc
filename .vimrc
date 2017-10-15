@@ -81,6 +81,9 @@ Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()
 
 autocmd VimEnter * wincmd p
+autocmd FileType vue syntax sync fromstart
+" Vue syntax highligting
+autocmd BufNewFile,BufRead *.vue set ft=vue
 
 let g:javascript_plugin_jsdoc = 1
 let g:ack_use_dispatch = 1
