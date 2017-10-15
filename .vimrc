@@ -97,10 +97,6 @@ map <leader>b :BufExplorer<return>
 
 " Navigation
 map <leader><tab> <c-w>w
-noremap <silent> <leader>l <c-w>l
-noremap <silent> <leader>h <c-w>h
-noremap <silent> <leader>k <c-w>k
-noremap <silent> <leader>j <c-w>j
 nmap H ^
 vmap H ^
 nmap L $
@@ -124,7 +120,9 @@ noremap <leader>aw :Ack <cword><cr>
 " -------------------- Macros --------------------
 " Converts current line to a console log
 let @l = 'Iconsole.log(A);'
-nmap <leader>lg @l
+let @h = 'I<lywA></pA>hcit'
+nmap <leader>lg @j
+nmap <leader>h @h
 
 " -------------------- Theming --------------------
 colorscheme deep-space
