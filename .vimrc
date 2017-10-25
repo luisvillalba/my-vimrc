@@ -39,6 +39,9 @@ filetype plugin on
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" Vue
+let g:vue_disable_pre_processors=1
+
 " NERDTree
 let NERDTreeShowHidden=1
 
@@ -105,7 +108,7 @@ vmap L $
 " Edit common files
 map <leader>1 :e ~/.vimrc<enter>
 map <leader>2 :e ~/.zshrc<enter>
-map <leader>wr :w<enter>:so %<enter>
+map <leader>ww :w<enter>:so %<enter>
 
 " Toggle Syntastic Mode
 nmap <leader>t :SyntasticToggleMode<enter>
