@@ -115,6 +115,7 @@ nmap <leader>t :SyntasticToggleMode<enter>
 
 " Surround
 vmap <leader>' S'
+vmap <leader>" S"
 
 " Ack Motions
 vnoremap <leader>as y:Ack <C-r>=fnameescape(@")<CR><CR>
