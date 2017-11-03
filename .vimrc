@@ -125,7 +125,7 @@ noremap <leader>aw :Ack <cword><cr>
 " Converts current line to a console log
 let @l = 'Iconsole.log(A);'
 let @h = 'I<lywA></pA>hcit'
-nmap <leader>lg @j
+nmap <leader>lg @l
 nmap <leader>h @h
 
 " -------------------- Theming --------------------
