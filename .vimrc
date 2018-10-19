@@ -93,6 +93,7 @@ let g:ack_use_dispatch = 1
 
 " --------------------- KEY MAPPINGS -------------------
 " Nerdtree
+let NERDTreeIgnore = ['\.pyc$', '\.DS_Storage']
 nmap <leader>n :NERDTree<CR>
 
 " Buffer Explorer
