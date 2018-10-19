@@ -66,6 +66,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'L9'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'git://github.com/pangloss/vim-javascript.git'
+Plugin 'git://github.com/tyrannicaltoucan/vim-deep-space.git'
 Plugin 'git://github.com/tpope/vim-dispatch.git'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'jlanzarotta/bufexplorer'
@@ -93,7 +94,7 @@ let g:ack_use_dispatch = 1
 
 " --------------------- KEY MAPPINGS -------------------
 " Nerdtree
-let NERDTreeIgnore = ['\.pyc$', '\.DS_Storage']
+let NERDTreeIgnore = ['\.pyc$', '\.DS_Storage', '\.idea' ]
 nmap <leader>n :NERDTree<CR>
 
 " Buffer Explorer
