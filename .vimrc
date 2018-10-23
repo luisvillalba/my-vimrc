@@ -66,8 +66,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'L9'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'git://github.com/pangloss/vim-javascript.git'
-Plugin 'git://github.com/tyrannicaltoucan/vim-deep-space.git'
+Plugin 'git://github.com/hdima/python-syntax.git'
 Plugin 'git://github.com/tpope/vim-dispatch.git'
+Plugin 'git://github.com/rafi/awesome-vim-colorschemes.git'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'mhinz/vim-signify'
@@ -131,7 +132,9 @@ let @h = 'I<lywA></pA>hcit'
 nmap <leader>lg @l
 nmap <leader>h @h
 
-
 " -------------------- Theming --------------------
-colorscheme deep-space
+set background=dark
+set termguicolors
+colorscheme apprentice
+let g:deepspace_italics=1
 highlight ColorColumn ctermbg=lightgray guibg=lightgray
