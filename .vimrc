@@ -66,9 +66,10 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'L9'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'git://github.com/pangloss/vim-javascript.git'
-Plugin 'git://github.com/hdima/python-syntax.git'
+Plugin 'git://github.com/vim-python/python-syntax.git'
 Plugin 'git://github.com/tpope/vim-dispatch.git'
 Plugin 'git://github.com/rafi/awesome-vim-colorschemes.git'
+Plugin 'tomasiser/vim-code-dark'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'mhinz/vim-signify'
@@ -91,6 +92,7 @@ autocmd FileType vue syntax sync fromstart
 autocmd BufNewFile,BufRead *.vue set ft=vue
 
 let g:javascript_plugin_jsdoc = 1
+let g:python_highlight_all = 1
 let g:ack_use_dispatch = 1
 
 " --------------------- KEY MAPPINGS -------------------
@@ -107,6 +109,10 @@ nmap H ^
 vmap H ^
 nmap L $
 vmap L $
+nmap J <C-d>
+vmap J <C-d>
+nmap K <C-u>
+vmap K <C-u>
 
 " Edit common files
 map <leader>1 :e ~/.vimrc<enter>
@@ -135,6 +141,6 @@ nmap <leader>h @h
 " -------------------- Theming --------------------
 set background=dark
 set termguicolors
-colorscheme apprentice
+colorscheme codedark
 let g:deepspace_italics=1
 highlight ColorColumn ctermbg=lightgray guibg=lightgray
