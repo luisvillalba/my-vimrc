@@ -130,7 +130,6 @@ vmap <leader>" S"
 vnoremap <leader>as y:Ack <C-r>=fnameescape(@")<CR><CR>
 noremap <leader>aw :Ack <cword><cr>
 
-
 " -------------------- Macros --------------------
 " Converts current line to a console log
 let @l = 'Iconsole.log(A);'
