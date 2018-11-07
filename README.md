@@ -3,5 +3,6 @@ My Vim configuration file
 
 ## Install my vim file
 ```
-https://raw.githubusercontent.com/luisvillalba/my-vimrc/master/.vimrc
+cd ~/;
+curl -LO https://raw.githubusercontent.com/luisvillalba/my-vimrc/master/.vimrc
 ```
