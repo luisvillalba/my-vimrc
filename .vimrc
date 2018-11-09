@@ -27,7 +27,7 @@ set shiftwidth=2
 set smartcase
 set smartindent
 set softtabstop=2
-set textwidth=150
+set textwidth=140
 set wildmode=list:longest
 set writebackup
 syntax on
