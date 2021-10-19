@@ -27,7 +27,7 @@ set shiftwidth=2
 set smartcase
 set smartindent
 set softtabstop=2
-set textwidth=150
+set textwidth=140
 set wildmode=list:longest
 set writebackup
 syntax on
@@ -66,9 +66,10 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'L9'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'git://github.com/pangloss/vim-javascript.git'
-Plugin 'git://github.com/hdima/python-syntax.git'
+Plugin 'git://github.com/vim-python/python-syntax.git'
 Plugin 'git://github.com/tpope/vim-dispatch.git'
 Plugin 'git://github.com/rafi/awesome-vim-colorschemes.git'
+Plugin 'tomasiser/vim-code-dark'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'mhinz/vim-signify'
@@ -77,8 +78,6 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'posva/vim-vue'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'skammer/vim-css-color'
-Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -91,6 +90,7 @@ autocmd FileType vue syntax sync fromstart
 autocmd BufNewFile,BufRead *.vue set ft=vue
 
 let g:javascript_plugin_jsdoc = 1
+let g:python_highlight_all = 1
 let g:ack_use_dispatch = 1
 
 " --------------------- KEY MAPPINGS -------------------
@@ -107,6 +107,10 @@ nmap H ^
 vmap H ^
 nmap L $
 vmap L $
+nmap J <C-d>
+vmap J <C-d>
+nmap K <C-u>
+vmap K <C-u>
 
 " Edit common files
 map <leader>1 :e ~/.vimrc<enter>
@@ -124,7 +128,6 @@ vmap <leader>" S"
 vnoremap <leader>as y:Ack <C-r>=fnameescape(@")<CR><CR>
 noremap <leader>aw :Ack <cword><cr>
 
-
 " -------------------- Macros --------------------
 " Converts current line to a console log
 let @l = 'Iconsole.log(A);'
@@ -135,6 +138,6 @@ nmap <leader>h @h
 " -------------------- Theming --------------------
 set background=dark
 set termguicolors
-colorscheme apprentice
+colorscheme codedark
 let g:deepspace_italics=1
 highlight ColorColumn ctermbg=lightgray guibg=lightgray
