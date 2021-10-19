@@ -27,7 +27,7 @@ set shiftwidth=2
 set smartcase
 set smartindent
 set softtabstop=2
-set textwidth=150
+set textwidth=140
 set wildmode=list:longest
 set writebackup
 syntax on
@@ -78,8 +78,6 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'posva/vim-vue'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'skammer/vim-css-color'
-Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -129,7 +127,6 @@ vmap <leader>" S"
 " Ack Motions
 vnoremap <leader>as y:Ack <C-r>=fnameescape(@")<CR><CR>
 noremap <leader>aw :Ack <cword><cr>
-
 
 " -------------------- Macros --------------------
 " Converts current line to a console log
